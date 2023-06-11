@@ -1,0 +1,10 @@
+<div class="buttns">
+  <div class="buttons" *ngFor="let category of categoriesList; let i = index" style="font-family: 'Courier New', Courier, monospace;">
+    <button mat-raised-button color="primary" (click)="selectCategory(i)" style="background-color: green; font-family: 'Courier New', Courier, monospace; font-size: 18px; padding: 12px 24px; width: 200px; height: 60px;">
+      {{ category.name }}
+    </button>
+  </div>
+  <button mat-raised-button color="warn" (click)="selectCategory(0)" style="font-family: 'Courier New', Courier, monospace;background-color: beige; color:brown">
+    Reset
+  </button>
+</div>

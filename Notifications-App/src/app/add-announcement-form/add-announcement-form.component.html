@@ -1,0 +1,34 @@
+<div class="form-container">
+<form #announcementForm="ngForm" (ngSubmit)="onSubmit(announcementForm)" style=" font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; background-color:white;">
+      <mat-form-field class = "example-full-width">
+        <mat-label style="font-family: 'Courier New', Courier, monospace;"> Title </mat-label>
+        <input matInput placeholder="Title" [(ngModel)]="title" name="Title" style=" font-family: 'Courier New', Courier, monospace;" required> 
+    </mat-form-field>
+    <mat-form-field class = "example-full-width">
+        <mat-label style="font-family: 'Courier New', Courier, monospace;"> Message </mat-label>
+        <input matInput placeholder="Message" [(ngModel)]="textarea" name="Message" required> 
+    </mat-form-field>
+    <mat-form-field class = "example-full-width">
+        <mat-label style="font-family: 'Courier New', Courier, monospace;"> Author </mat-label>
+        <input matInput placeholder="Author" [(ngModel)]="author" name="Author" required> 
+    </mat-form-field>
+    <mat-form-field class = "example-full-width">
+        <mat-label style="font-family: 'Courier New', Courier, monospace;"> ImageURL </mat-label>
+        <input matInput placeholder="imageURL" [(ngModel)]="imageURL" name="Image-URL" required> 
+    </mat-form-field>
+
+
+    
+    <mat-form-field class="example-full-width" >
+        <mat-label style="font-family: 'Courier New', Courier, monospace;">Select a category</mat-label>
+        <mat-select   [(ngModel)]="selectedCateg" name="category" (selectionChange)="categoryReceived($event)">
+          <mat-option *ngFor="let category of categories"  [value]="category.id" style="font-family: 'Courier New', Courier, monospace;">
+            {{ category.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" style=" color:white; background-color: green;font-family: 'Courier New', Courier, monospace;">Submit</button>
+</form>
+<button mat-raised-button  routerLink="/home" style="color: brown; background-color: beige; font-family: 'Courier New', Courier, monospace;width: 300px;">Cancel</button>
+</div>

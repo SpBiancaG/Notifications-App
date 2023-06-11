@@ -1,0 +1,20 @@
+<div class="announcement-container">
+  
+  
+  <p class="imageURL" alt="error">{{ imageURL }} </p>
+  <p class="title">{{ title }}</p>
+  <p class="message">{{ message }} </p>
+  <p class="author">Author: {{ author }}</p>
+ 
+  <div>
+    <button
+      [routerLink]="'/edit'" 
+      mat-raised-button color="primary"
+      (click)="editAnnouncement()" style="font-family: 'Courier New', Courier, monospace;width: 150px;">
+      Edit
+    </button>
+    <button mat-raised-button [routerLink]="''" color="" (click)="deleteAnnouncement()" style="font-family: 'Courier New', Courier, monospace; width: 150px;">
+      Delete
+    </button>
+  </div>
+</div>

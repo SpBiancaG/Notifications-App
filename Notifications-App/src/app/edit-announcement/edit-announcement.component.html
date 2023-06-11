@@ -1,0 +1,72 @@
+<div class="form-container">
+<form (ngSubmit)="editAnnouncement()">
+   <mat-form-field class="full-width" >
+      <mat-label>imageURL</mat-label>
+      <input
+        matInput
+        placeholder="ImageURL"
+        [(ngModel)]="imageURL"
+        name="imageURL"
+        
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Title</mat-label>
+      <input
+        matInput
+        placeholder="Title"
+        [(ngModel)]="title"
+        name="title"
+        required
+      />
+
+    </mat-form-field>
+     <mat-form-field class= "full-width">
+      <mat-label >Message</mat-label>
+      <textarea
+        matInput
+        placeholder="Message"
+        [(ngModel)]="textarea"
+        name="textarea"
+        required
+        
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Author</mat-label>
+      <input
+        matInput
+        placeholder="Author"
+        [(ngModel)]="author"
+        name="author"
+        required
+      />
+    </mat-form-field>
+  
+   
+  
+ 
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Select a category</mat-label>
+      <mat-select [(ngModel)]="selectedCategory" name="category" (selectionChange)="categoryReceived($event)">
+        <mat-option *ngFor="let category of announcementService.categories" [value]="category.id">
+          {{ category.name }} 
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div>
+
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit"
+      style="background-color: green;color:white; font-family: 'Courier New', Courier, monospace ;width: 210px;">Submit
+  </button>
+  <button [routerLink]="''" mat-raised-button color="warn" style="background-color: beige;color:brown; font-family: 'Courier New', Courier, monospace; width:210px">Cancel</button>
+</div>
+  </form>
+
+</div>  
