@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnnouncementsAPI</name>
+    </assembly>
+    <members>
+        <member name="M:AnnouncementsAPI.Controllers.AnnouncementController.GetAnnouncements">
+            <summary>
+            Get all announcements
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.AnnouncementController.CreateAnnouncement(AnnouncementsAPI.Dtos.AnnouncementDto)">
+            <summary>
+            Create a new announcements 
+            </summary>
+            <param name="announcement">Announcements to be added</param>
+            <returns>BadRequest if the given announcement is null ,otherwise returns Ok</returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.AnnouncementController.UpdateAnnouncement(System.Guid,AnnouncementsAPI.Models.Announcement)">
+            <summary>
+            Update an Exisetent announcement
+            </summary>
+            <param name="announcement">Announcement to update</param>
+            <returns>BadRequest if the announcement is null or invalid, otherwise it returns Ok</returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.AnnouncementController.DeleteAnnouncement(System.Guid)">
+            <summary>
+            Delete an announcement by it's Id
+            </summary>
+            <param name="announcementId">Announcement Id to be deleted</param>
+            <returns>Ok if the announcement was successfully deleted, otherwise returns BadRequest</returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.AnnouncementController.GetAnnouncementById(System.Guid)">
+            <summary>
+            Get an announcement by it's Id
+            </summary>
+            <param name="id">Announcement Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.CategoryController.GetCategories">
+            <summary>
+            Get all categories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.CategoryController.CreateCategory(AnnouncementsAPI.Dtos.CategoryDto)">
+            <summary>
+            Create a new category 
+            </summary>
+            <param name="category">Category to be added</param>
+            <returns>BadRequest if the given category is null ,otherwise returns Ok</returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.CategoryController.UpdateCategory(System.Guid,AnnouncementsAPI.Models.Category)">
+            <summary>
+            Update an Exisetent category
+            </summary>
+            <param name="category">Category to update</param>
+            <returns>BadRequest if the category is null or invalid, otherwise it returns Ok</returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.CategoryController.DeleteCategory(System.Guid)">
+            <summary>
+            Delete an category by it's Id
+            </summary>
+            <param name="id">Category Id to be deleted</param>
+            <returns>Ok if the category was successfully deleted, otherwise returns BadRequest</returns>
+        </member>
+        <member name="M:AnnouncementsAPI.Controllers.CategoryController.GetCategoryById(System.Guid)">
+            <summary>
+            Get an category by it's Id
+            </summary>
+            <param name="id">Category Id</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
